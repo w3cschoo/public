@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- icon图表使用 -->
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
+
+    <title>腾讯视频 电视剧——海量高清视频在线观看</title>
+    <link rel="stylesheet" href="index.css" />
+
+    <script>
+      // 自适应页面大小
+      document.querySelector('html').style.fontSize =
+        window.screen.width / 20 + 'px'
+      window.onresize = function () {
+        document.querySelector('html').style.fontSize =
+          window.screen.width / 20 + 'px'
+      }
+    </script>
+
+    <!-- 导入layui -->
+     <link href="./layui-v2.9.2/layui-v2.9.2/layui/css/layui.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="lunbo">
+        <div class="layui-carousel" id="ID-carousel-demo-image">
+            <div carousel-item>
+              <div><img src="https://img.zcool.cn/community/01ebd158b3ddeaa801219c773a18b7.jpg@1280w_1l_2o_100sh.jpg"></div>
+              <div><img src="https://img.zcool.cn/community/01608d58b3ddeaa801219c77de7295.jpg@1280w_1l_2o_100sh.jpg"></div>
+              <div><img src="https://www.jsdaima.com/kindeditor/attached/image/20180326/20180326141729_87645.jpg"></div>
+              <div><img src="	https://img.zcool.cn/community/019dbe5cef8b56a80121a47008275b.jpg@1280w_1l_2o_100sh.jpg"></div>
+              <div><img src="	https://img.zcool.cn/community/0177ca5bc92bd3a801213dea671c20.jpg@1280w_1l_2o_100sh.jpg"></div>
+            </div>
+    </div>
+  </body>
+
+  <!-- 导入layui -->
+  <script src="./layui-v2.9.2/layui-v2.9.2/layui/layui.js"></script>
+  <!-- 使用接口设置轮播属性 -->
+    <script>
+        layui.use(function(){
+            var carousel = layui.carousel;
+            // 渲染 - 图片轮播
+            carousel.render({
+              elem: '#ID-carousel-demo-image',
+              width: '100%',
+              height: '562px',
+              indicator:'none',//指示器
+              arrow:'none',//箭头
+              autoplay:true,//自动播放
+              interval:2000,//间隔时间
+            });
+        });
+    </script>
+</html>
